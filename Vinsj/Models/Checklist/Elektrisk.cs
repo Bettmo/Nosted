@@ -1,4 +1,4 @@
-using Vinsj.Models.Dashboard;
+//using Vinsj.Models.Dashboard;
 using System.ComponentModel.DataAnnotations.Schema;
 
 public class Elektrisk
@@ -15,13 +15,13 @@ public class Elektrisk
     public bool defekt { get; set; } // Bool som sjekker om defekt er true
     public string? Kommentar { get; set; } // Kommentarfelt
     
-    public ServiceOrdre? ServiceOrdre { get; set; }
+    //public ServiceOrdre? ServiceOrdre { get; set; }
 }
 
 public class ElektriskListViewModel
 {
     public List<Elektrisk> ElektriskListe { get; set; } = new List<Elektrisk>();
-    public ServiceOrdre? ServiceOrdreInfo { get; set; } 
+    //public ServiceOrdre? ServiceOrdreInfo { get; set; } 
     
     public int ServiceOrdreID { get; set; } 
     public int Ordrenummer { get; set; } 
