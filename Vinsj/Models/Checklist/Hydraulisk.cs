@@ -1,4 +1,4 @@
-using Vinsj.Models.Dashboard;
+//using Vinsj.Models.Dashboard;
 using System.ComponentModel.DataAnnotations.Schema;
 
 public class Hydraulisk
@@ -15,13 +15,13 @@ public class Hydraulisk
     public bool defekt { get; set; } // Bool som sjekker om defekt er true
     public string? Kommentar { get; set; } // Kommentarfelt
     
-    public ServiceOrdre? ServiceOrdre { get; set; }
+    //public ServiceOrdre? ServiceOrdre { get; set; }
 }
 
 public class HydrauliskListViewModel
 {
     public List<Hydraulisk> HydrauliskListe { get; set; } = new List<Hydraulisk>();
-    public ServiceOrdre? ServiceOrdreInfo { get; set; } 
+    //public ServiceOrdre? ServiceOrdreInfo { get; set; } 
     
     public int ServiceOrdreID { get; set; } 
     public int Ordrenummer { get; set; } 
