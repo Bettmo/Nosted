@@ -1,34 +1,42 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Vinsj.Data;
 
-namespace Vinsj.Controllers.ChecklistControllers;
+
+
 
 public class ElektriskController : Controller
 {
-    private readonly ApplicationDbContext _context;
-    
-    public ElektriskController(ApplicationDbContext context)
+    //Trym: Setter opp en dependency injection for elektrisk modellen, muligens må endres å for å få det funksjonelt.
+    private void ElektriskInsertData()
     {
-        _context = context;
+        using (var dbContext = new ApplicationDbContext())
+        {
+            var elVariabel = new Elektrisk();
+            dbContext.elektrisk.Add(elVariabel);
+            dbContext.SaveChanges();
+        }
     }
-    
+
+
+
     // GET
     public IActionResult Index()
     {
         return View();
     }
-    
-    
+
+
     //Brage: Denne funksjonen lager et "elektrisk" objekt og oppdaterer databasen
     [HttpPost]
     public IActionResult CreateElektrisk(Elektrisk elektrisk)
     {
+
         if (ModelState.IsValid)
         {
             try
             {
                 // Brage: DbContext har ikke blitt satt opp ordentlig, må bli gjort.
-                _context.Elektrisk.Add(elektrisk);
-                _context.SaveChanges();
+                ElektriskInsertData();
 
                 // Brage: Her bør en passende action for suksess bli lagt til.
                 return RedirectToAction("Success");
@@ -43,5 +51,5 @@ public class ElektriskController : Controller
         // Hvis modellen ikke er valid returneres viewet med feil
         return View(elektrisk);
     }
-    
+
 }
