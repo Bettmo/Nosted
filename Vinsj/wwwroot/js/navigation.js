@@ -11,11 +11,13 @@ const logoImage = document.getElementById("logoImage");
             // Change the image source to another logo when sidebar is closed
             logoImage.src = "/mini_logo.jpg";
             logoImage.alt = "Mindre logo";
+            logoImage.style.transition = "width 0.4s ease";
             logoImage.style.width = "60px"; // Adjust the width for the smaller logo
         } else {
             // Change the image source back to the original logo when sidebar is open
             logoImage.src = "/logo_nosted_endrett.jpg";
             logoImage.alt = "logo";
+            logoImage.style.transition = "width 0.4s ease";
             logoImage.style.width = "200px"; // Adjust the width for the original logo
         }
     });
