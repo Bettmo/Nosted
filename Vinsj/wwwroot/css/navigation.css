@@ -10,6 +10,7 @@
     padding: 10px 14px;
     background: var(--sidebar-color);
     transition: var(--tran-05);
+    z-index: 100;
 }
 .sidebar.close{
     width: 88px;
@@ -138,4 +139,19 @@
     flex-direction: column;
     justify-content: space-between;
     overflow: auto;
+}
+/* Burde være -200px */
+.home{
+    position: relative;
+    height: 100vh;
+    left: 150px;
+    width: calc(100% - 150px);
+    background: var(--body-color);
+    transition: var(--tran-05);
+}
+
+/* burde være -88px */
+.sidebar.close ~ .home{
+    left: 50px;
+    width: calc(100% - 50px);
 }
