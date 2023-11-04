@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿
+using Microsoft.AspNetCore.Mvc;
 
 namespace Vinsj.Controllers.ChecklistControllers;
 
-public class ElektriskController : Controller
+/*public class ElektriskController : Controller
 {
     private readonly ApplicationDbContext _context;
     
@@ -16,7 +17,7 @@ public class ElektriskController : Controller
     {
         return View();
     }
-    
+  
     
     //Brage: Denne funksjonen lager et "elektrisk" objekt og oppdaterer databasen
     [HttpPost]
@@ -45,3 +46,4 @@ public class ElektriskController : Controller
     }
     
 }
+*/

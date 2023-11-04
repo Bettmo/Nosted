@@ -3,47 +3,110 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Vinsj</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>@ViewData["Title"] - Nøsted</title>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Vinsj.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/navigation.css" asp-append-version="true" />
+    <link rel="icon" href="~/favicon.ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Vinsj</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+<header>
+        
+    <!--
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Vinsj</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - Vinsj - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    </nav>
+    -->
+</header>
+
+<nav class="sidebar close">
+    <header>
+        <div class="image-text">
+            <span class="image">
+                <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <img id="logoImage" src="~/logo_nosted_endrett.jpg" alt="logo">
+                </a>
+            </span>
+        </div>
+        
+        <i class='bx bx-chevron-right toggle' ></i>
+        
+    </header>
+    
+    <div class="menu-bar">
+        <div class="menu">
+            <li class="search-box">
+                <i class="bx bx-search icon"></i>
+                <input type="search" placeholder="Search...">
+            </li>
+            <ul class="menu-links">
+                <li class="nav-link">
+                    <a asp-area="" asp-controller="Home" asp-action="Privacy">
+                        <i class="bx bx-home-alt icon"></i>
+                        <span class="text nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a asp-area="" asp-controller="Home" asp-action="Privacy">
+                        <i class="bx bx-home-alt icon"></i>
+                        <span class="text nav-text">Placeholder</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a asp-area="" asp-controller="Home" asp-action="Privacy">
+                        <i class="bx bx-home-alt icon"></i>
+                        <span class="text nav-text">Placeholder</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a asp-area="" asp-controller="Home" asp-action="Privacy">
+                        <i class="bx bx-home-alt icon"></i>
+                        <span class="text nav-text">Placeholder</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a asp-area="" asp-controller="Home" asp-action="Privacy">
+                        <i class="bx bx-home-alt icon"></i>
+                        <span class="text nav-text">Placeholder</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="bottom-content">
+            <li class="">
+                <a asp-area="" asp-controller="Home" asp-action="Privacy">
+                    <i class="bx bx-log-out icon"></i>
+                    <span class="text nav-text">Logg ut</span>
+                </a>
+            </li>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
+
+    <script src="~/js/navigation.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
