@@ -17,6 +17,11 @@ public class HomeController : Controller
     {
         return View();
     }
+    
+    public IActionResult Serviceskjema()
+    {
+        return View();
+    }
 
     public IActionResult Privacy()
     {
