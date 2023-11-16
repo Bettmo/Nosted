@@ -1,38 +1,16 @@
-//using Vinsj.Models.Dashboard;
-using System.ComponentModel.DataAnnotations.Schema;
-
+namespace Vinsj.Models.Checklist;
 public class Mekanisk
 {
-    public int ID { get; set; }
+    public Guid ID_Mek { get; set; }
+    public string SjekkClutch { get; set; }
+    public string SjekkBremser { get; set; }
+    public string SjekkLagerForTrommel { get; set; }
+    public string SjekkPTO { get; set; }
+    public string SjekkKjedeStrammer { get; set; }
+    public string SjekkWire { get; set; }
+    public string SjekkPinionLager { get; set; }
+    public string SjekkKileKjedehjul { get; set; }
+    public string? Kommentar { get; set; }
     
-    [ForeignKey("ServiceOrdre")]
-    public int ServiceOrdreID { get; set; } // ForeignKey for ServiceOrdre
-    public int Ordrenummer { get; set; }
-    
-    public string? sjekkpunkt { get; set; } // Henter Sjekkpunktet
-    public bool ok { get; set; } // Bool som sjekker om ok er true
-    public bool borSkiftes { get; set; } // Bool som sjekker om borSKiftes er true
-    public bool defekt { get; set; } // Bool som sjekker om defekt er true
-    public string? Kommentar { get; set; } // Kommentarfelt
-    
-    //public ServiceOrdre? ServiceOrdre { get; set; }
-}
-
-public class MekaniskListViewModel
-{
-    public List<Mekanisk> MekaniskListe { get; set; } = new List<Mekanisk>();
-    //public ServiceOrdre? ServiceOrdreInfo { get; set; } 
-    
-    public int ServiceOrdreID { get; set; } 
-    public int Ordrenummer { get; set; } 
-    public string? Produkttype { get; set; } 
-    public string? Årsmodell { get; set; } 
-    public string? Serienummer { get; set; } 
-    public string? Status { get; set; } 
-    public string? Fornavn { get; set; } 
-    public string? Etternavn { get; set; } 
-    public string? Telefonnummer { get; set; } 
-    public string? Feilbeskrivelse { get; set; } 
-    public string? KommentarFraKunde { get; set; } 
-    public string? Kommentar { get; set; } 
+    //legg til kobling til serviceordre modell
 }
