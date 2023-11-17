@@ -1,0 +1,41 @@
+#loginBG{
+<!-- Legge inn bakgrunn på login-siden -->
+}
+
+#loginInnhold{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+img{
+    margin: 50px 0;
+}
+
+#loginDiv{
+    text-align: center;
+    width: 40%;
+    height: 350px;
+    background-color: #909eaa;
+}
+
+#loginDiv p{
+    margin: 30px 0 0 0;
+}
+
+#loginForm{
+    display: flex;
+    flex-direction: column;
+}
+
+#loginForm label{
+    margin: 30px 0;
+}
+
+#loginSubmit{
+    width: 70%;
+    height: 30px;
+    margin: auto;
+    margin-top: 20px;
+}
