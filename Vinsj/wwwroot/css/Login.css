@@ -1,0 +1,19 @@
+#loginBG{
+<!-- Legge inn bakgrunn på login-siden -->
+}
+
+#loginInnhold{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#loginDiv{
+    text-align: center;
+}
+
+#loginForm{
+    display: flex;
+    flex-direction: column;
+}
