@@ -1,20 +1,47 @@
 ﻿
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 0;
+#sjekklisteHeader{
+    text-align: center;
+    margin: 15px 0;
 }
 
-.box {
-    width: 100px;
-    height: 50px;
-    border: 1px solid black;
-    box-sizing: border-box;
+.innhold {
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr 1fr 1fr 1fr; 
+    grid-gap: 10px;
+    width: 95%;
+    height: 95%;
+    margin: 20px auto;
 }
 
 .wide-container {
-    grid-column: span 5;
-    height: 50px;
+    width: 100%;
+    height: 100%;
     border: 1px solid black;
     box-sizing: border-box;
+    background-color: gray;
+    border-radius: 6px;
+    padding: 10px;
 }
+
+.treBokser{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: lightgreen;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+#skjemaBtn{
+    width: 60%;
+    height: 40px;
+    margin: 30px auto;
+}
+
