@@ -1,4 +1,4 @@
-﻿
+﻿/* --- Header og felles-css for "wide-container" --- */
 #sjekklisteHeader{
     text-align: center;
     margin: 15px 0;
@@ -6,7 +6,7 @@
 
 .innhold {
     display: grid;
-    grid-template-rows: 1fr 3fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 0.5fr 3fr 1fr 1.4fr 1fr 0.5fr 1fr; /* En ekstra "fr" for ekstra padding under listen */
     grid-gap: 10px;
     width: 95%;
     height: 95%;
@@ -18,13 +18,14 @@
     height: 100%;
     border: 1px solid black;
     box-sizing: border-box;
-    background-color: gray;
+    background-color: var(--sidebar-color);
+    color: var(--primary-color);
     border-radius: 6px;
     padding: 10px;
 }
 
 
-/* --- Første enhet --- */
+/* --- Første enhet "SereNr. og type" --- */
 .wide-c-en{
     display: grid;
     grid-template-columns: 2fr 3fr;
@@ -38,34 +39,37 @@
 }
 
 
-/* --- Mekanisk hydraulisk elektrisk enhet --- */
+/* --- "Mekanisk, hydraulisk og elektrisk enhet" --- */
 .treBokser{
     display: flex;
     flex-direction: row;
     gap: 10px;
+    width: 100%;
 }
 .enhetHeader{
     text-align: center;
     margin: 10px 0;
 }
-
 .box {
     width: 100%;
     height: 100%;
     border: 1px solid black;
     box-sizing: border-box;
-    background-color: lightgreen;
+    background-color: var(--sidebar-color);
+    color: var(--primary-color);
     border-radius: 6px;
     padding: 10px;
     display: flex;
     flex-direction: column;
+    flex: 1;
+    transition: 0.9s;
 }
 .punkt{
     display: flex;
     justify-content: space-between;
     text-align: center;
+    margin: 10px 0;
 }
-
 .punkt div{
     display: flex;
     flex-direction: row;
@@ -76,27 +80,81 @@
     justify-content: end;
     gap: 5px;
     text-align: justify;
-    padding: 10px 0;
 }
 .punkt div label input{
-    
+    margin-top: -5px;
+}
+/* For å sette farge på valgte sjekkliste-knapper */
+input[value="OK"]{
+    accent-color: #007c00;
+}
+input[value="Bør Skiftes"]{
+    accent-color: #be7f00;
+}
+input[value="Defekt"]{
+    accent-color: #ff0000;
 }
 
 
-/* --- Andre enhet --- */
+/* --- Andre enhet "Trykk settinger" --- */
+.wide-c-to{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.wide-c-to label{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+}
+.wide-c-to label input{
+    width: 80%;
+    margin: 0 5px;
+}
 
 
+/* --- Tredje enhet "Funksjons tester" --- */
+.wide-c-tre{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.wide-c-tre label{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+}
+.wide-c-tre label input{
+    width: 70%;
+    margin: 0 5px;
+}
 
-/* --- Tredje enhet --- */
+
+/* --- Fjerde enhet "Kommentar" --- */
+.wide-c-fire label{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+}
+.wide-c-fire label input{
+    width: 80%;
+    margin: 0 5px;
+    height: 80px;
+}
 
 
-
-/* --- Fjerde enhet --- */
-
-
-
-/* --- Femte enhet --- */
-
+/* --- Femte enhet "Signatur og dato" --- */
+.wide-c-fem{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.enhetBunn{
+    margin: auto;
+}
+.enhetBunn input{
+    margin: 0 0 0 10px;
+}
 
 
 /* --- Input-element enhet --- */
@@ -127,4 +185,42 @@ input{
     border: 1px solid var(--sofia-fargen);
     box-sizing: border-box;
     border-radius: 6px;
+}
+
+
+/* --- Media-queries for bedre tilpassing for stajsonær over 1900px, laptop under 1900px og for skjerm under 1250px --- */
+@media (min-width: 1900px){
+    .box{
+        flex: 1;
+    }
+    .box:active{
+        flex: 2;
+    }
+    .box:hover{
+        flex: 2;
+    }
+    .box:focus{
+        flex: 2;
+    }
+}
+@media (max-width: 1900px){
+    .innhold {
+        grid-template-rows: 0.3fr 3fr 0.6fr 0.8fr 0.6fr 0.3fr 1fr; /* En ekstra "fr" for ekstra padding under listen */
+    }
+    .treBokser{
+        flex-direction: column;
+    }
+    .punkt{
+        width: 60%;
+        align-items: center;
+        margin: 0 auto !important;
+    }
+}
+@media (max-width: 1250px){
+    .punkt{
+        width: 100%;
+    }
+    .wide-c-to label, .wide-c-tre label, .wide-c-fire label{
+        width: 100% !important;
+    }
 }
