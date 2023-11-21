@@ -1,0 +1,130 @@
+﻿
+#sjekklisteHeader{
+    text-align: center;
+    margin: 15px 0;
+}
+
+.innhold {
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-gap: 10px;
+    width: 95%;
+    height: 95%;
+    margin: 20px auto;
+}
+
+.wide-container {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: gray;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+
+/* --- Første enhet --- */
+.wide-c-en{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+.wide-c-en label{
+    margin: auto 0;
+}
+.wide-c-en label input{
+    width: 60%;
+    margin: 0 5px;
+}
+
+
+/* --- Mekanisk hydraulisk elektrisk enhet --- */
+.treBokser{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.enhetHeader{
+    text-align: center;
+    margin: 10px 0;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: lightgreen;
+    border-radius: 6px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.punkt{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.punkt div{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.punkt div label{
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+    text-align: justify;
+    padding: 10px 0;
+}
+.punkt div label input{
+    
+}
+
+
+/* --- Andre enhet --- */
+
+
+
+/* --- Tredje enhet --- */
+
+
+
+/* --- Fjerde enhet --- */
+
+
+
+/* --- Femte enhet --- */
+
+
+
+/* --- Input-element enhet --- */
+input{
+    background: var(--primary-color-light);
+    border-radius: 6px;
+    height: 35px;
+    padding: 0 5px;
+    border: none;
+}
+
+
+/* --- Send inn knapp --- */
+#skjemaBtn{
+     width: 60%;
+     height: 40px;
+     margin: 30px auto;
+     transition: 0.2s;
+     background-color: var(--sidebar-color);
+     color: var(--primary-color);
+     font-size: 1em;
+}
+#skjemaBtn:hover{
+    background-color: var(--sofia-fargen);
+    color: var(--sidebar-color);
+    cursor: pointer;
+    transform: scale(0.98);
+    border: 1px solid var(--sofia-fargen);
+    box-sizing: border-box;
+    border-radius: 6px;
+}

@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Sjekkliste";
+}
+@section CustomStyles {
+    <link rel="stylesheet" href="~/css/Sjekkliste.css" />
+    <link rel="stylesheet" href="~/css/site.css"/>
+}
+
+
+<h1 id="sjekklisteHeader">@ViewData["Title"]</h1>
+
+<form class="innhold">
+    <div class="wide-container wide-c-en">
+        <label for="headerSerieNr">Serienummer:
+            <input id="headerSerieNr" type="text"/>
+        </label>
+        <label for="headerType">Type:
+            <input id="headerType" type="text"/>
+        </label>
+    </div>
+    <div class="treBokser">
+        <div class="box mekanisk">
+            <h4 class="enhetHeader">Mekanisk</h4>
+            <div>
+                <div class="punkt" id="ClutchStatus">
+                    <strong>Sjekk clutch lameller for slitasje</strong>
+                    <div>
+                        <label><input type="radio" name="ClutchStatus" value="OK">OK</label>
+                        <label><input type="radio" name="ClutchStatus" value="Bør Skiftes">Bør Skiftes</label>
+                        <label><input type="radio" name="ClutchStatus" value="Defekt"> Defekt</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box hydraulisk">
+            
+        </div>
+        <div class="box elektrisk">
+            
+        </div>
+    </div>
+    <div class="wide-container wide-c-to">x</div>
+    <div class="wide-container wide-c-tre">x</div>
+    <div class="wide-container wide-c-fire">x</div>
+    <div class="wide-container wide-c-fem">x</div>
+    <input id="skjemaBtn" type="submit" value="Ferdig"/>
+</form>
