@@ -1,7 +1,23 @@
+using Microsoft.EntityFrameworkCore;
+using Vinsj.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Database directory
+var dbPath = Path.Combine(AppContext.BaseDirectory, "Data");
+if (!Directory.Exists(dbPath))
+{
+    Directory.CreateDirectory(dbPath);
+}
+
+// Configure ApplicationDbContext with the connection string
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// ... other configurations ...
 
 var app = builder.Build();
 
