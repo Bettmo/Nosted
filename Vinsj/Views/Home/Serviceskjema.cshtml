@@ -1,0 +1,95 @@
+@{
+    ViewData["Title"] = "Serviceskjema";
+}
+@section CustomStyles {
+    <link rel="stylesheet" href="~/css/Serviceskjema.css"/>
+    <link rel="stylesheet" href="~/css/site.css"/>
+}
+
+
+<h1 id="serviceskjemaHeader">@ViewData["Title"]</h1>
+
+<form class="serviceskjemaInnhold">
+    <div class="skjemaEnhet skjemaEnhetEn">
+        <div class="enhet">
+            <label for="sKunde">Kunde:</label>
+            <input id="sKunde" type="text"/>
+        </div>
+        <div class="enhet">
+            <label for="sMottattDato">Mottatt dato:</label>
+            <input id="sMottattDato" type="datetime-local"/>
+        </div>
+        <div class="enhet">
+            <label for="sAdresse">Adresse:</label>
+            <input id="sAdresse" type="text"/>
+        </div>
+        <div class="enhet">
+            <label for="sEPost">E-post:</label>
+            <input id="sEPost" type="text"/>
+        </div>
+        <div class="enhet">
+            <label for="sOrdreNr">Ordrenummer:</label>
+            <input id="sOrdreNr" type="number" min="0"/>
+        </div>
+        <div class="enhet">
+            <label for="sTelefon">Telefon:</label>
+            <input id="sTelefon" type="text"/>
+        </div>
+        <div class="enhet">
+            <label for="sProdukttype">Produkttype:</label>
+            <input id="sProdukttype" type="text"/>
+        </div>
+        <div class="enhet">
+            <label for="sAarsmodell">Årsmodell:</label>
+            <input id="sAarsmodell" type="number" min="0"/>
+        </div>
+        <div class="enhet">
+            <label for="sGaranti">Garanti:</label>
+            <input id="sGaranti" type="text"/>
+        </div>
+        <div class="enhet">
+            <label for="sSerieNr">Serienummer:</label>
+            <input id="sSerieNr" type="text"/>
+        </div>
+    </div>
+    <div class="skjemaEnhet skjemaEnhetToTreFire">
+        <label for="sAvtaltMKunde">Avtalt med kunde:</label>
+        <input id="sAvtaltMKunde" type="text" placeholder="Skriv inn her..."/>
+    </div>
+    <div class="skjemaEnhet skjemaEnhetToTreFire">
+        <label for="sReperasjonsBeskrivelse">Reperasjonsbeskrivelse:</label>
+        <input id="sReperasjonsBeskrivelse" type="text" placeholder="Skriv inn her..."/>
+    </div>
+    <div class="skjemaEnhet skjemaEnhetToTreFire">
+        <label for="sMedgåtteDeler">Medgåtte deler:</label>
+        <input id="sMedgåtteDeler" type="text" placeholder="Skriv inn her..."/>
+    </div>
+    <div class="skjemaEnhet skjemaEnhetFem">
+        <div class="enhet">
+            <label for="sArbeidstimer">Arbeidstimer:</label>
+            <input id="sArbeidstimer" type="number" min="0" step="0.5"/>
+        </div>
+        <div class="enhet">
+            <label for="sFerdigDato">Ferdigstilt dato:</label>
+            <input id="sFerdigDato" type="datetime-local"/>
+        </div>
+        <div class="enhet">
+            <label for="sUtskiftRetur">Utskiftet deler returnert:</label>
+            <input id="sUtskiftRetur" type="text"/> <!-- Usikker på hvilken type som er riktig, endte opp med "text" -->
+        </div>
+        <div class="enhet">
+            <label for="sForsendelsesmåte">Forsendelsesmåte:</label>
+            <input id="sForsendelsesmåte" type="text"/> 
+        </div>
+        <div class="enhet">
+            <label for="sSignKunde">Sign. kunde:</label>
+            <input id="sSignKunde" type="text"/>
+        </div>
+        <div class="enhet">
+            <label for="sSignReperator">Sign. reperatør:</label>
+            <input id="sSignReperator" type="text"/>
+        </div>
+    </div>
+    
+    <input id="serviceskjemaBtn" type="submit" value="Ferdig"/>
+</form>

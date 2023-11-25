@@ -26,11 +26,11 @@ namespace Vinsj.Data
         }
         
         /* Eric: Legg alle modellene under: */
-        public DbSet<Elektrisk> elektrisk { get; set; }
+        //public DbSet<Elektrisk> elektrisk { get; set; }
         
-        public DbSet<Mekanisk> mekanisk { get; set; }
+       // public DbSet<Mekanisk> mekanisk { get; set; }
         
-        public DbSet<Hydraulisk> hydraulisk { get; set; }
+        //public DbSet<Hydraulisk> hydraulisk { get; set; }
         
         
         /* OnModelCreating konfigurer detaljene i modellen. */

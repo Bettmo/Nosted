@@ -23,12 +23,17 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult Sjekkliste()
     {
         return View();
     }
     
     public IActionResult Login()
+    {
+        return View();
+    }
+    
+    public IActionResult Brukerportal()
     {
         return View();
     }

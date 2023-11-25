@@ -1,20 +1,63 @@
-﻿* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+﻿
+#IndexHeader{
+    text-align: center;
+    margin: 15px 0;
+}
+p{
+    text-align: center;
 }
 
-main{
-    min-height: 100vh;
-    background: linear-gradient(to right top,#0c4128,#0dcaf0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#IndexSjekkliste{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 0.4fr 1fr 0.4fr;
+    gap: 10px;
+    margin-top: 20px;
+    text-align: center;
 }
-.Boks{
-    background: white;
-    min-height: 80vh;
-    width: 60%;
-    background: linear-gradient(to right bottom, rgba(255,255,255,0.7),rgba(255,255,255,0.3));
-    border-radius: 2rem;
+
+#IndexSjekkElement{
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    background-color: var(--sidebar-color);
+    color: var(--primary-color);
+    border-radius: 6px;
+    margin: auto;
+    align-items: center;
+    padding: 5px 20px;
+}
+#IndexSjekkElement div{
+    margin-right: 30px;
+}
+
+button{
+    width: 80%;
+    height: 40px;
+    margin: 30px auto;
+    transition: 0.2s;
+    background-color: var(--primary-color);
+    color: var(--sidebar-color);
+    font-size: 1em;
+    border: none;
+    border-radius: 6px;
+}
+button:hover{
+    background-color: var(--sofia-fargen);
+    color: var(--sidebar-color);
+    cursor: pointer;
+    transform: scale(0.98);
+    border: 1px solid var(--sofia-fargen);
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+#IndexMerSjekkBtn{
+    width: 40%;
+    background-color: var(--sidebar-color);
+    color: var(--primary-color);
+}
+#IndexMerSjekkBtn:hover{
+    background-color: var(--sofia-fargen);
+    color: var(--sidebar-color);
+    
 }
