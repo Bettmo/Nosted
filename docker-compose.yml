@@ -1,0 +1,20 @@
+﻿#file: noinspection SpellCheckingInspection
+services:
+  vinsjdb:
+    container_name: vinsj-db
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+      - 8002:1443
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=password@12345#
+  vinsj:
+    container_name: vinsj
+    image: ${DOCKER_REGISTRY-}vinsj
+    build:
+      context: .
+      dockerfile: Vinsj/Dockerfile
+    ports:
+      - 8001:80
+    depends_on:
+      - vinsjdb
