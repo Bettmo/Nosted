@@ -1,0 +1,59 @@
+@{
+    ViewData["Title"] = "Brukerportal";
+}
+@section CustomStyles {
+    <link rel="stylesheet" href="~/css/Brukerportal.css"/>
+    <link rel="stylesheet" href="~/css/site.css"/>
+}
+
+
+<h1 id="BrukerPortalHeader">@ViewData["Title"]</h1>
+
+<main id="brukerportalHovedinnhold">
+    <div>
+        <h4>Opprett en bruker:</h4>
+        <section class="bPortalSection" id="bPortalLag">
+            <form id="bpLeggTilBruker">
+                <div id="bpLeggTilInfo">
+                    <div class="bpLeggTilEnhet">
+                        <label for="pbLeggTilNavn">Navn:</label>
+                        <input id="pbLeggTilNavn" type="text"/>
+                    </div>
+                    <div class="bpLeggTilEnhet">
+                        <label for="pbLeggTilEpost">E-post:</label>
+                        <input id="pbLeggTilEpost" type="text"/>
+                    </div>
+                    <div class="bpLeggTilEnhet">
+                        <label for="pbLeggTilTelefon">Telefonnummer:</label>
+                        <input id="pbLeggTilTelefon" type="text"/>
+                    </div>
+                    <div class="bpLeggTilEnhet">
+                        <label for="pbLeggTilAdresse">Adresse:</label>
+                        <input id="pbLeggTilAdresse" type="text"/>
+                    </div>
+                </div>
+                <div id="bpLeggTilRolle">
+                    <p>Velg brukerens rolle:</p>
+                    <div>
+                        <label><input type="radio" name="bpLeggTilRolle" value="Admin">Admin</label>
+                        <label><input type="radio" name="bpLeggTilRolle" value="Kunde">Kunde</label>
+                        <label><input type="radio" name="bpLeggTilRolle" value="Ansatt">Ansatt</label>
+                    </div>
+                </div>
+                <input type="submit" id="leggTilBrukerBtn" value="Legg til Bruker"/>
+            </form>
+        </section>
+    </div>
+    <div>
+        <h4>Liste over alle brukere:</h4>
+        <section class="bPortalSection" id="bPortalVis">
+            <div></div>
+        </section>
+    </div>
+    <div>
+        <h4>x</h4>
+        <section class="bPortalSection">
+            <div></div>
+        </section>
+    </div>
+</main>
