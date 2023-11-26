@@ -1,17 +1,17 @@
-
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Vinsj.Models;
-namespace Vinsj.Data
-{
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+
+
+namespace Vinsj.Data;
+
+    public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
 
-// Bør ikke dette være i Program.cs?
+        /*
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -24,9 +24,10 @@ namespace Vinsj.Data
                 optionsBuilder.UseSqlite(connectionString);
             }
         }
+        */
         
         /* Eric: Legg alle modellene under: */
-        //public DbSet<Elektrisk> elektrisk { get; set; }
+        public DbSet<test> Tests { get; set; }
         
        // public DbSet<Mekanisk> mekanisk { get; set; }
         
@@ -43,21 +44,9 @@ namespace Vinsj.Data
 
           forkortelsene er bare variabel navnet brukt i et lambda utrykk for en instant av entiteten som blir konfigurert */
             
-            modelBuilder.Entity<ApplicationUser>().ToTable("Users"); // Customize the Users table name
-            modelBuilder.Entity<IdentityRole>().ToTable("Roles"); // Customize the Roles table name
-            modelBuilder.Entity<IdentityUserRole<string>>().ToTable("UserRoles"); 
-            modelBuilder.Entity<IdentityUserClaim<string>>().ToTable("UserClaims");
-            modelBuilder.Entity<IdentityUserLogin<string>>().ToTable("UserLogins"); 
-            modelBuilder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims"); 
-            modelBuilder.Entity<IdentityUserToken<string>>().ToTable("UserTokens"); 
-        }
-    }
-}
-
             
             
         }
         
     }
-    
-}
+

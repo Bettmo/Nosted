@@ -1,13 +1,9 @@
 ﻿#file: noinspection SpellCheckingInspection
+networks:
+  dev:
+    driver: bridge
+
 services:
-  vinsjdb:
-    container_name: vinsj-db
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    ports:
-      - 8002:1443
-    environment:
-      - ACCEPT_EULA=Y
-      - SA_PASSWORD=password@12345#
   vinsj:
     container_name: vinsj
     image: ${DOCKER_REGISTRY-}vinsj
@@ -15,6 +11,22 @@ services:
       context: .
       dockerfile: Vinsj/Dockerfile
     ports:
-      - 8001:80
+      - "8088:80"
     depends_on:
       - vinsjdb
+    environment:
+      - ConnectionStrings__DefaultConnection=User ID=postgres;Password=postgres;Server=vinsjdb;Port=5432;Database=NostedDataBase; IntegratedSecurity=true;Pooling=true;
+      - ASPNETCORE_URLS=http://+:80
+    networks:
+      - dev
+  
+  vinsjdb:
+    container_name: vinsjdb
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=NostedDataBase
+    ports:
+      - "5433:5432"
+    restart: always

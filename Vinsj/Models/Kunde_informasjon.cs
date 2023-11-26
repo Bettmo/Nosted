@@ -3,18 +3,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Vinsj.Models;
 
-public class Funksjons_test
+public class Kunde_informasjon
 {
     [Key]
     [ForeignKey("ServiceOrdre")]
-    public int ServiceOrdreID_FK { get; set; }
+    public int ServiceOrdreIDFK { get; set; }
     
-    public string? TestVinsj { get; set; }
+    public string? Adresse { get; set; }
     
-    public float Trekkraft { get; set; }
+    public string? Epost { get; set; }
     
-    public float Bremsekraft { get; set; }
+    public int Telefon { get; set; }
     
-    // Navigasjon for Foreign Key, 
+    // Navigasjon for fremmednøkkel tullet
     public ServiceOrdre ServiceOrdre { get; set; }
 }
