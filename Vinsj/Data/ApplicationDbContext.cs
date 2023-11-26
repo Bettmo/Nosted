@@ -1,8 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using Vinsj.Models;
 
 
-namespace Vinsj.Data
-{
+namespace Vinsj.Data;
+
     public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
@@ -10,6 +11,7 @@ namespace Vinsj.Data
         {
         }
 
+        /*
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -22,9 +24,10 @@ namespace Vinsj.Data
                 optionsBuilder.UseSqlite(connectionString);
             }
         }
+        */
         
         /* Eric: Legg alle modellene under: */
-        //public DbSet<Elektrisk> elektrisk { get; set; }
+        public DbSet<test> Tests { get; set; }
         
        // public DbSet<Mekanisk> mekanisk { get; set; }
         
@@ -46,4 +49,4 @@ namespace Vinsj.Data
         }
         
     }
-}
+

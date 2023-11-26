@@ -1,5 +1,7 @@
+using Vinsj;
 using Microsoft.EntityFrameworkCore;
 using Vinsj.Data;
+using Vinsj.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,16 +9,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 // Database directory
-var dbPath = Path.Combine(AppContext.BaseDirectory, "Data");
-if (!Directory.Exists(dbPath))
-{
-    Directory.CreateDirectory(dbPath);
-}
+/*var dbHost = Environment.GetEnvironmentVariable("DB_HOST");
+var dbName = Environment.GetEnvironmentVariable("DB_NAME");
+var dbPassword = Environment.GetEnvironmentVariable("DB_SA_PASSWORD");
+var connectionString =$"Data Source=host.docker.internal;Database={dbName};User ID=sa;Password={dbPassword}";
+//builder.Services.AddDbContext<ApplicationDbContext>(opt => opt.UseServer(connectionString)); */
 
-// Configure ApplicationDbContext with the connection string
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
-
+var conn = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<ApplicationDbContext>(opt => opt.UseNpgsql(conn));
 // ... other configurations ...
 
 var app = builder.Build();
