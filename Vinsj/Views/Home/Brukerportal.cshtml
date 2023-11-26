@@ -1,0 +1,94 @@
+@{
+    ViewData["Title"] = "Brukerportal";
+}
+@section CustomStyles {
+    <link rel="stylesheet" href="~/css/Brukerportal.css"/>
+    <link rel="stylesheet" href="~/css/site.css"/>
+}
+
+
+<h1 id="BrukerPortalHeader">@ViewData["Title"]</h1>
+
+<main id="brukerportalHovedinnhold">
+    <div>
+        <h4>Opprett en bruker:</h4>
+        <section class="bPortalSection" id="bPortalLag">
+            <form id="bpLeggTilBruker">
+                <div id="bpLeggTilInfo">
+                    <div class="bpLeggTilEnhet">
+                        <label for="pbLeggTilNavn">Navn:</label>
+                        <input id="pbLeggTilNavn" type="text"/>
+                    </div>
+                    <div class="bpLeggTilEnhet">
+                        <label for="pbLeggTilEpost">E-post:</label>
+                        <input id="pbLeggTilEpost" type="email"/>
+                    </div>
+                    <div class="bpLeggTilEnhet">
+                        <label for="pbLeggTilTelefon">Telefonnummer:</label>
+                        <input id="pbLeggTilTelefon" type="text"/>
+                    </div>
+                    <div class="bpLeggTilEnhet">
+                        <label for="pbLeggTilAdresse">Adresse:</label>
+                        <input id="pbLeggTilAdresse" type="text"/>
+                    </div>
+                </div>
+                <div id="pbLeggTilPogR">
+                    <div id="bpLeggTilPassordDiv">
+                        <label for="pbLeggTilPassord">Passord:</label>
+                        <input id="pbLeggTilPassord" type="password"/>
+                    </div>
+                    <div id="bpLeggTilRolle">
+                        <p>Velg brukerens rolle:</p>
+                        <div>
+                            <label><input type="radio" name="bpLeggTilRolle" value="Admin">Admin</label>
+                            <label><input type="radio" name="bpLeggTilRolle" value="Kunde">Kunde</label>
+                            <label><input type="radio" name="bpLeggTilRolle" value="Ansatt">Ansatt</label>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" id="leggTilBrukerBtn" value="Legg til Bruker"/>
+            </form>
+        </section>
+    </div>
+    <div>
+        <h4>Liste over alle brukere:</h4>
+        <section class="bPortalSection" id="bPortalVis">
+            <div class="visBruker">
+                <div class="visBrukerRolle visBrukerRolleAdmin">Rolle:</div> <!-- Legge til forskjellig klasse avhengig av rollen -->
+                <div class="visBrukerInfo">
+                    <div class="visBrukerNavn">Navn:</div>
+                    <div class="visBrukerPassord">Passord:</div>
+                    <div class="visBrukerEpost">E-post:</div>
+                    <div class="visBrukerTelefon">Telefonnummer:</div>
+                    <div class="visBrukerAdresse">Adresse:</div>
+                </div>
+                <input type="submit" class="visBrukerRediger" value="Rediger bruker"/>
+                <input type="submit" class="visBrukerSlett" value="Slett bruker"/>
+            </div>
+            <div class="visBruker">
+                <div class="visBrukerRolle visBrukerRolleKunde">Rolle:</div> <!-- Legge til forskjellig klasse avhengig av rollen -->
+                <div class="visBrukerInfo">
+                    <div class="visBrukerNavn">Navn:</div>
+                    <div class="visBrukerPassord">Passord:</div>
+                    <div class="visBrukerEpost">E-post:</div>
+                    <div class="visBrukerTelefon">Telefonnummer:</div>
+                    <div class="visBrukerAdresse">Adresse:</div>
+                </div>
+                <input type="submit" class="visBrukerRediger" value="Rediger bruker"/>
+                <input type="submit" class="visBrukerSlett" value="Slett bruker"/>
+            </div>
+            <div class="visBruker">
+               <div class="visBrukerRolle visBrukerRolleAnsatt">Rolle:</div> <!-- Legge til forskjellig klasse avhengig av rollen -->
+               <div class="visBrukerInfo">
+                   <div class="visBrukerNavn">Navn:</div>
+                   <div class="visBrukerPassord">Passord:</div>
+                   <div class="visBrukerEpost">E-post:</div>
+                   <div class="visBrukerTelefon">Telefonnummer:</div>
+                   <div class="visBrukerAdresse">Adresse:</div>
+               </div>
+               <input type="submit" class="visBrukerRediger" value="Rediger bruker"/>
+               <input type="submit" class="visBrukerSlett" value="Slett bruker"/>
+           </div>
+        </section>
+    </div>
+</main>
