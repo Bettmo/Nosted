@@ -27,12 +27,13 @@ public class HomeController : Controller
     {
         return View();
     }
-    
-    public IActionResult Login()
+
+   public IActionResult Login()
     {
-        return View();
+        return View(~/Views/Account/Login.cshtml);
+        
     }
-    
+
     public IActionResult Brukerportal()
     {
         return View();

@@ -2,7 +2,6 @@ using Vinsj;
 using Microsoft.EntityFrameworkCore;
 using Vinsj.Data;
 using Vinsj.Models;
-using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,10 +17,6 @@ var connectionString =$"Data Source=host.docker.internal;Database={dbName};User 
 
 var conn = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(opt => opt.UseNpgsql(conn));
-
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<AuthDbContext>();
-
-
 // ... other configurations ...
 
 var app = builder.Build();
