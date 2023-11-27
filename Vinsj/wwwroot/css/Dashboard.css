@@ -12,12 +12,16 @@ p{
     flex-direction: column;
     margin: 20px auto;
     width: 95%;
+    text-align: center;
+    gap: 15px;
 }
 #IndexSjekkElementer{
     display: flex;
     flex-direction: column;
     margin: auto;
     width: 100%;
+    gap: 20px;
+    margin-bottom: 50px;
 }
 .IndexSjekkElement{
     display: grid;
