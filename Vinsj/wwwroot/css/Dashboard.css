@@ -8,16 +8,18 @@ p{
 }
 
 #IndexSjekkliste{
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
     width: 95%;
-    margin: auto;
-    display: grid;
-    grid-template-rows: 0.4fr 1fr 0.4fr;
-    gap: 10px;
-    margin-top: 20px;
-    text-align: center;
 }
-
-#IndexSjekkElement{
+#IndexSjekkElementer{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+}
+.IndexSjekkElement{
     display: grid;
     grid-template-columns: repeat(5, 2fr);
     background-color: var(--sidebar-color);
@@ -27,10 +29,10 @@ p{
     align-items: center;
     padding: 5px 20px;
 }
-#IndexSjekkElement div{
+.IndexSjekkElement div {
     margin-right: 30px;
 }
-
+    
 button{
     width: 80%;
     height: 40px;
@@ -50,14 +52,4 @@ button:hover{
     border: 1px solid var(--sofia-fargen);
     box-sizing: border-box;
     border-radius: 6px;
-}
-#IndexMerSjekkBtn{
-    width: 40%;
-    background-color: var(--sidebar-color);
-    color: var(--primary-color);
-}
-#IndexMerSjekkBtn:hover{
-    background-color: var(--sofia-fargen);
-    color: var(--sidebar-color);
-    
 }
