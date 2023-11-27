@@ -1,3 +1,5 @@
+
+@model Vinsj.Models.ServiceSkjemaView
 @{
     ViewData["Title"] = "Serviceskjema";
 }
@@ -9,7 +11,7 @@
 
 <h1 id="serviceskjemaHeader">@ViewData["Title"]</h1>
 
-<form class="serviceskjemaInnhold">
+<form asp-action="CreateServiceOrder" method="post" class="serviceskjemaInnhold">
     <div class="skjemaEnhet skjemaEnhetEn">
         <div class="enhet">
             <label for="sKunde">Kunde:</label>
@@ -91,5 +93,5 @@
         </div>
     </div>
     
-    <input id="serviceskjemaBtn" type="submit" value="Ferdig"/>
+    <input id="serviceskjemaBtn" type="submit"/>
 </form>
