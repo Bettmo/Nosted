@@ -22,7 +22,7 @@ public class ServiceSkjemaView
     public string SAvtaltKunde { get; set; }
     public string SRepBeskrivelse { get; set; }
     public string SDelerBrukt { get; set; }
-    public int SAbreidsTimer { get; set; }
+    public int SArbeidsTimer { get; set; }
     public string SFerdigDato { get; set; }
     public string SDelerRetunert { get; set; }
     public string SForsendelseMate { get; set; }

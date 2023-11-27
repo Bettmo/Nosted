@@ -33,9 +33,29 @@ public class ServiceOrderController : Controller
                 ServiceOrdreIDFK = serviceOrdre.ServiceOrdreID
             };
 
-            var produktInformasjon = new Produkt_informasjon();
+            var produktInformasjon = new Produkt_informasjon()
+            {
+                ProduktType = model.ProduktType,
+                Arsmodell = model.ProduktArsmodell,
+                Serienummer = model.ProduktSerienummer,
+                Garanti = model.ProduktGaranti,
+                DatoMottat = model.ProduktMottat,
+                ServiceOrdreIDFK = serviceOrdre.ServiceOrdreID
+            };
 
-            var serviceskjemaInformasjon = new ServiceSkjema();
+            var serviceskjemaInformasjon = new ServiceSkjema()
+            {
+                AvtaltKunde = model.SAvtaltKunde,
+                RepBeskrivelse = model.SRepBeskrivelse,
+                DelerBrukt = model.SDelerBrukt,
+                AbreidsTimer = model.SArbeidsTimer,
+                FerdigDato = model.SFerdigDato,
+                DelerRetunert = model.SDelerBrukt,
+                ForsendelseMate = model.SForsendelseMate,
+                SignKunde = model.SSignKunde,
+                SignRep = model.SSignRep
+                
+            };
 
             _context.Add(serviceOrdre);
             _context.Add(kundeInformasjon);
