@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Vinsj.Models.SjekklisteView
+
+@{
     ViewData["Title"] = "Sjekkliste";
 }
 @section CustomStyles {
@@ -9,7 +11,7 @@
 
 <h1 id="sjekklisteHeader">@ViewData["Title"]</h1>
 
-<form class="innhold">
+<form asp-action="CreateSjekkliste" class="innhold">
     <div class="wide-container wide-c-en">
         <label for="headerSerieNr">Serienummer:
             <input id="headerSerieNr" type="text"/>
