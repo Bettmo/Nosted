@@ -21,7 +21,7 @@ public class ServiceOrderController : Controller
         {
             var serviceOrdre = new ServiceOrdre()
             {
-                
+                ServiceOrdreID = model.ServiceOrdreID
             };
 
             var kundeInformasjon = new Kunde_informasjon()
@@ -53,7 +53,8 @@ public class ServiceOrderController : Controller
                 DelerRetunert = model.SDelerBrukt,
                 ForsendelseMate = model.SForsendelseMate,
                 SignKunde = model.SSignKunde,
-                SignRep = model.SSignRep
+                SignRep = model.SSignRep,
+                ServiceOrdreIDFK = serviceOrdre.ServiceOrdreID,
                 
             };
 
@@ -70,4 +71,6 @@ public class ServiceOrderController : Controller
 
         return View("~/Views/Home/ServiceSkjema.cshtml", model);
     }
+    
+    
 }

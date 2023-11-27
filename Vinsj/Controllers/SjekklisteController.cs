@@ -23,12 +23,12 @@ namespace Vinsj.Controllers
 
                 }
 
-                var Komponent_service = new Komponent_service();
+                var KomponentService = new Komponent_service()
                 {
-                    Komponent = model.komponentKomponent;
-                    Avdeling = model.komponentAvdeling;
-                    Komponent_Status = model.komponentKomponent_Status;
-                }
+                    Komponent = model.komponentKomponent,
+                    Avdeling = model.komponentAvdeling,
+                    Komponent_Status = model.komponentKomponent_Status,
+                };
 
                 var Funksjons_test = new Funksjons_test();
                 {
