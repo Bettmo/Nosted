@@ -16,5 +16,5 @@ public class ServiceOrdre
     public ICollection<SignaturerModel> SignaturerModels { get; set; }
     public ICollection<trykk_settinger> TrykkSettingers { get; set; }
     public ICollection<Funksjons_test> FunksjonsTests { get; set; }
-    public object ServiceOrderID { get; set; }
+
 }

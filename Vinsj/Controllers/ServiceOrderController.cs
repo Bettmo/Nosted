@@ -21,6 +21,7 @@ public class ServiceOrderController : Controller
         {
             var serviceOrdre = new ServiceOrdre()
             {
+                
             };
 
             var kundeInformasjon = new Kunde_informasjon()
@@ -64,7 +65,7 @@ public class ServiceOrderController : Controller
 
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("ServiceSkjema","Home", new { id = serviceOrdre.ServiceOrderID });
+            return RedirectToAction("ServiceSkjema","Home", new { id = serviceOrdre.ServiceOrdreID });
             
         }
 
