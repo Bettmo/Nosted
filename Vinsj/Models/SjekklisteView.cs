@@ -4,22 +4,22 @@
     {
 
         //Properties from Komponent_service
-        public string? Komponent { get; set; }
-        public string? Avdeling { get; set; } 
-        public string? Komponent_Status { get; set; }
+        public string? komponentKomponent { get; set; }
+        public string? komponentAvdeling { get; set; } 
+        public string? komponentKomponent_Status { get; set; }
 
         //Properties from Funksjons_test
-        public string? TestVinsj { get; set; }
-        public float Trekkraft { get; set; }
-        public float Bremsekraft { get; set; }
+        public string? funksjonsTestVinsj { get; set; }
+        public float funksjonsTrekkraft { get; set; }
+        public float funksjonsBremsekraft { get; set; }
 
         //Properties from trykk_settinger
-        public float Bar { get; set; }
+        public float trykkBar { get; set; }
 
         //Properties from SignaturerModel
-        public string? Kommentar { get; set; }
-        public string? Signatur { get; set; }
-        public string? Dato { get; set; }
+        public string? signaturKommentar { get; set; }
+        public string? signaturSignatur { get; set; }
+        public string? signaturDato { get; set; }
     }
 
 

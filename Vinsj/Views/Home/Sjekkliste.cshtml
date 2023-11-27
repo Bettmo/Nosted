@@ -1,4 +1,5 @@
-﻿@model Vinsj.Models.SjekklisteView
+﻿@using static Vinsj.Models.SjekklisteView
+@model Vinsj.Models.SjekklisteView
 
 @{
     ViewData["Title"] = "Sjekkliste";
@@ -11,7 +12,7 @@
 
 <h1 id="sjekklisteHeader">@ViewData["Title"]</h1>
 
-<form asp-action="CreateSjekkliste" class="innhold">
+<form asp-controller="SjekklisteController" asp-action="CreateSjekkliste" class="innhold">
     <div class="wide-container wide-c-en">
         <label for="headerSerieNr">Serienummer:
             <input id="headerSerieNr" type="text"/>
