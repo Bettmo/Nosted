@@ -2,12 +2,12 @@ using Microsoft.EntityFrameworkCore;
 using Vinsj.Models;
 
 
-namespace Vinsj.Data;
+namespace Vinsj.Data
+{
 
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
 
@@ -49,4 +49,4 @@ namespace Vinsj.Data;
         }
         
     }
-
+    }
