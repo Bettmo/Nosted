@@ -7,7 +7,7 @@ public class ServiceSkjema
 {
     [Key]
     [ForeignKey("ServiceOrdre")]
-    public int ServiceOrdreID_FK { get; set; }
+    public int ServiceOrdreIDFK { get; set; }
     
     public string? AvtaltKunde { get; set; }
     public string? RepBeskrivelse { get; set; }
