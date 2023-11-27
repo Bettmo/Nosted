@@ -19,9 +19,19 @@ public class ServiceOrderController : Controller
     {
         if (ModelState.IsValid)
         {
-            var serviceOrdre = new ServiceOrdre();
+            var serviceOrdre = new ServiceOrdre()
+            {
+                
+            };
 
-            var kundeInformasjon = new Kunde_informasjon();
+            var kundeInformasjon = new Kunde_informasjon()
+            {
+                Kunde = model.KundeNavn,
+                Adresse = model.KundeAdresse,
+                Epost = model.KundeEpost,
+                Telefon = model.KundeTelefon,
+                ServiceOrdreIDFK = serviceOrdre.ServiceOrdreID
+            };
 
             var produktInformasjon = new Produkt_informasjon();
 
@@ -34,10 +44,10 @@ public class ServiceOrderController : Controller
 
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("Success");
+            return RedirectToAction("ServiceSkjema","Home");
             
         }
 
-        return View(model);
+        return View("~/Views/Home/ServiceSkjema.cshtml", model);
     }
 }

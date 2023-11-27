@@ -15,4 +15,4 @@ using System.ComponentModel.DataAnnotations.Schema;
     // Navigasjon for fremmednøkkel
     public ServiceOrdre ServiceOrdre { get; set; }
 }
-}
+
