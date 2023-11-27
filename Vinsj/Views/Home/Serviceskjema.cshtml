@@ -1,3 +1,6 @@
+
+
+@model Vinsj.Models.ServiceSkjemaView
 @{
     ViewData["Title"] = "Serviceskjema";
 }
@@ -9,87 +12,87 @@
 
 <h1 id="serviceskjemaHeader">@ViewData["Title"]</h1>
 
-<form class="serviceskjemaInnhold">
+<form asp-controller="ServiceOrder" asp-action="CreateServiceOrder" method="post" class="serviceskjemaInnhold">
     <div class="skjemaEnhet skjemaEnhetEn">
         <div class="enhet">
-            <label for="sKunde">Kunde:</label>
-            <input id="sKunde" type="text"/>
+            <label asp-for="KundeNavn">Kunde:</label>
+            <input asp-for="KundeNavn" type="text"/>
         </div>
         <div class="enhet">
-            <label for="sMottattDato">Mottatt dato:</label>
-            <input id="sMottattDato" type="datetime-local"/>
+            <label asp-for="ProduktMottat">Mottatt dato:</label>
+            <input asp-for="ProduktMottat" type="datetime-local"/>
         </div>
         <div class="enhet">
-            <label for="sAdresse">Adresse:</label>
-            <input id="sAdresse" type="text"/>
+            <label asp-for="KundeAdresse">Adresse:</label>
+            <input asp-for="KundeAdresse" type="text"/>
         </div>
         <div class="enhet">
-            <label for="sEPost">E-post:</label>
-            <input id="sEPost" type="text"/>
+            <label asp-for="KundeEpost">E-post:</label>
+            <input asp-for="KundeEpost" type="text"/>
         </div>
         <div class="enhet">
             <label for="sOrdreNr">Ordrenummer:</label>
             <input id="sOrdreNr" type="number" min="0"/>
         </div>
         <div class="enhet">
-            <label for="sTelefon">Telefon:</label>
-            <input id="sTelefon" type="text"/>
+            <label asp-for="KundeTelefon">Telefon:</label>
+            <input asp-for="KundeTelefon" type="text"/>
         </div>
         <div class="enhet">
-            <label for="sProdukttype">Produkttype:</label>
-            <input id="sProdukttype" type="text"/>
+            <label asp-for="ProduktType">Produkttype:</label>
+            <input asp-for="ProduktType" type="text"/>
         </div>
         <div class="enhet">
-            <label for="sAarsmodell">Årsmodell:</label>
-            <input id="sAarsmodell" type="number" min="0"/>
+            <label asp-for="ProduktArsmodell">Årsmodell:</label>
+            <input asp-for="ProduktArsmodell" type="number" min="0"/>
         </div>
         <div class="enhet">
-            <label for="sGaranti">Garanti:</label>
-            <input id="sGaranti" type="text"/>
+            <label asp-for="ProduktGaranti">Garanti:</label>
+            <input asp-for="ProduktGaranti" type="text"/>
         </div>
         <div class="enhet">
-            <label for="sSerieNr">Serienummer:</label>
-            <input id="sSerieNr" type="text"/>
+            <label asp-for="ProduktSerienummer">Serienummer:</label>
+            <input asp-for="ProduktSerienummer" type="text"/>
         </div>
     </div>
     <div class="skjemaEnhet skjemaEnhetToTreFire">
-        <label for="sAvtaltMKunde">Avtalt med kunde:</label>
-        <input id="sAvtaltMKunde" type="text" placeholder="Skriv inn her..."/>
+        <label asp-for="SAvtaltKunde">Avtalt med kunde:</label>
+        <input asp-for="SAvtaltKunde" type="text" placeholder="Skriv inn her..."/>
     </div>
     <div class="skjemaEnhet skjemaEnhetToTreFire">
-        <label for="sReperasjonsBeskrivelse">Reperasjonsbeskrivelse:</label>
-        <input id="sReperasjonsBeskrivelse" type="text" placeholder="Skriv inn her..."/>
+        <label asp-for="SRepBeskrivelse">Reperasjonsbeskrivelse:</label>
+        <input asp-for="SRepBeskrivelse" type="text" placeholder="Skriv inn her..."/>
     </div>
     <div class="skjemaEnhet skjemaEnhetToTreFire">
-        <label for="sMedgåtteDeler">Medgåtte deler:</label>
-        <input id="sMedgåtteDeler" type="text" placeholder="Skriv inn her..."/>
+        <label asp-for="SDelerBrukt">Medgåtte deler:</label>
+        <input asp-for="SDelerBrukt" type="text" placeholder="Skriv inn her..."/>
     </div>
     <div class="skjemaEnhet skjemaEnhetFem">
         <div class="enhet">
-            <label for="sArbeidstimer">Arbeidstimer:</label>
-            <input id="sArbeidstimer" type="number" min="0" step="0.5"/>
+            <label asp-for="SArbeidsTimer">Arbeidstimer:</label>
+            <input asp-for="SArbeidsTimer" type="number" min="0" step="0.5"/>
         </div>
         <div class="enhet">
-            <label for="sFerdigDato">Ferdigstilt dato:</label>
-            <input id="sFerdigDato" type="datetime-local"/>
+            <label asp-for="SFerdigDato">Ferdigstilt dato:</label>
+            <input asp-for="SFerdigDato" type="datetime-local"/>
         </div>
         <div class="enhet">
-            <label for="sUtskiftRetur">Utskiftet deler returnert:</label>
-            <input id="sUtskiftRetur" type="text"/> <!-- Usikker på hvilken type som er riktig, endte opp med "text" -->
+            <label asp-for="SDelerRetunert">Utskiftet deler returnert:</label>
+            <input asp-for="SDelerRetunert" type="text"/> <!-- Usikker på hvilken type som er riktig, endte opp med "text" -->
         </div>
         <div class="enhet">
-            <label for="sForsendelsesmåte">Forsendelsesmåte:</label>
-            <input id="sForsendelsesmåte" type="text"/> 
+            <label asp-for="SForsendelseMate">Forsendelsesmåte:</label>
+            <input asp-for="SForsendelseMate" type="text"/> 
         </div>
         <div class="enhet">
-            <label for="sSignKunde">Sign. kunde:</label>
-            <input id="sSignKunde" type="text"/>
+            <label asp-for="SSignKunde">Sign. kunde:</label>
+            <input asp-for="SSignKunde" type="text"/>
         </div>
         <div class="enhet">
-            <label for="sSignReperator">Sign. reperatør:</label>
-            <input id="sSignReperator" type="text"/>
+            <label asp-for="SSignRep">Sign. reperatør:</label>
+            <input asp-for="SSignRep" type="text"/>
         </div>
     </div>
     
-    <input id="serviceskjemaBtn" type="submit" value="Ferdig"/>
+    <input id="serviceskjemaBtn" type="submit"/>
 </form>

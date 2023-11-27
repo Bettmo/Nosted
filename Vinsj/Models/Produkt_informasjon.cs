@@ -7,7 +7,7 @@ public class Produkt_informasjon
 {
     [Key]
     [ForeignKey("ServiceOrdre")]
-    public int ServiceOrdreID_FK { get; set; }
+    public int ServiceOrdreIDFK { get; set; }
     
     public string? ProduktType { get; set; }
     
@@ -16,6 +16,8 @@ public class Produkt_informasjon
     public string? Serienummer { get; set; }
     
     public string? Garanti { get; set; }
+    
+    public string? DatoMottat { get; set; }
     
     // Navigasjon for Foreign Key, 
     public ServiceOrdre ServiceOrdre { get; set; }

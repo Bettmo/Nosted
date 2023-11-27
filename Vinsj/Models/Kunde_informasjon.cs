@@ -9,6 +9,7 @@ public class Kunde_informasjon
     [ForeignKey("ServiceOrdre")]
     public int ServiceOrdreIDFK { get; set; }
     
+    public string? Kunde { get; set; }
     public string? Adresse { get; set; }
     
     public string? Epost { get; set; }
