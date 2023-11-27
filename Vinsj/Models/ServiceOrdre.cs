@@ -7,6 +7,6 @@ public class ServiceOrdre
     [Key]
     public int ServiceOrdreID { get; set; }
     
-    public ICollection<trykk_settinger> TrykkSettingers { get; set; }
-    public ICollection<Komponent_service> KomponentServices { get; set; }
+    public ICollection<Kunde_informasjon> KundeInformasjons { get; set; }
+    public ICollection<Produkt_informasjon> ProduktInformasjons { get; set; }
 }
