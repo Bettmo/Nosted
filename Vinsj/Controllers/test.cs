@@ -6,7 +6,7 @@ using Vinsj.Data;
 using Vinsj.Models;
 
 namespace Vinsj.Controllers;
-
+/*
 public class TestController : ControllerBase
 {
     private readonly ILogger<TestController> _logger;
@@ -17,7 +17,7 @@ public class TestController : ControllerBase
         _logger = logger;
         _context = context;
     }
-
+/*
     [HttpGet(Name = "GetAllDrivers")]
     public async Task<IActionResult> Get()
     {
@@ -35,4 +35,4 @@ public class TestController : ControllerBase
         return Ok(allTests);
     }
     
-}    
+}    */

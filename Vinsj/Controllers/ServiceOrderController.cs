@@ -21,7 +21,6 @@ public class ServiceOrderController : Controller
         {
             var serviceOrdre = new ServiceOrdre()
             {
-                ServiceOrdreID = model.ServiceOrdreID
             };
 
             var kundeInformasjon = new Kunde_informasjon()
@@ -65,7 +64,7 @@ public class ServiceOrderController : Controller
 
             await _context.SaveChangesAsync();
 
-            return RedirectToAction("ServiceSkjema","Home");
+            return RedirectToAction("ServiceSkjema","Home", new { id = serviceOrdre.ServiceOrderID });
             
         }
 

@@ -33,9 +33,7 @@ namespace Vinsj.Data;
         public DbSet<Produkt_informasjon> ProduktInformasjons { get; set; } 
         public DbSet<ServiceOrdre> ServiceOrdres { get; set; }
         public DbSet <ServiceSkjema> ServiceSkjemas { get; set; }
-        public DbSet<ServiceSkjemaView> ServiceSkjema { get; set; }
         public DbSet<SignaturerModel> SignaturerModels { get; set; }
-        public DbSet<SjekklisteView> SjekklisteViews { get; set; }
         public DbSet<trykk_settinger> TrykkSettingers { get; set; }
 
         
@@ -53,7 +51,10 @@ namespace Vinsj.Data;
           .HasForeignKey at det er en foreign key
 
           forkortelsene er bare variabel navnet brukt i et lambda utrykk for en instant av entiteten som blir konfigurert */
-            
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Komponent_service>()
+                .HasKey(ks => new { ks.ServiceOrdreID_FK, ks.Komponent });
             
             
         }
