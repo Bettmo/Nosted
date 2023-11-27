@@ -45,18 +45,20 @@ namespace Vinsj.Controllers
 
                 }
 
-                _context.Add(Komponent_service);
+                _context.Add(KomponentService);
                 _context.Add(Funksjons_test);
                 _context.Add(Trykk_settinger);
                 _context.Add(SignaturerModel);
 
                 await _context.SaveChangesAsync();
 
-                return RedirectToAction("Sjekkliste", controllerName:"Home");
+                return RedirectToAction("Sjekkliste", controllerName: "Home");
 
             }
+            return View("~/Views/Home/Sjekkliste.cshtml", model);
 
-            return View(model);
         }
+        
     }
 }
+
