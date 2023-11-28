@@ -2,7 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Vinsj.Models;
 
-namespace Vinsj.Controllers;
+namespace Vinsj.Controllers
+{
 
 public class HomeController : Controller
 {
@@ -30,7 +31,7 @@ public class HomeController : Controller
 
    public IActionResult Login()
     {
-        return View(~/Views/Account/Login.cshtml);
+        return View();
         
     }
 

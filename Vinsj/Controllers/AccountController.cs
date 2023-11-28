@@ -56,7 +56,7 @@ namespace Vinsj.Controllers
         }
 
         [HttpGet]
-        [AllowAnonymous] //finn ut!!!!
+        [AllowAnonymous] 
         public IActionResult Login()
         {
             return View();
