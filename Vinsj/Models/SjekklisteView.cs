@@ -7,7 +7,7 @@
 
         //Properties from Komponent_service
         public string? komponentKomponent { get; set; }
-        public string? komponentAvdeling { get; set; } 
+        public string? komponentAvdeling { get; set; }
         public string? komponentKomponent_Status { get; set; }
 
         //Properties from Funksjons_test

@@ -14,7 +14,7 @@
 
 <form asp-controller="SjekklisteController" asp-action="CreateSjekkliste" class="innhold">
     <div class="wide-container wide-c-en">
-        <label for="headerSerieNr">Serienummer:
+        <label for="ordrenummer">Ordrenummer:
             <input id="headerSerieNr" type="text"/>
         </label>
         <label for="headerType">Type:
@@ -28,65 +28,65 @@
                 <div class="punkt" id="ClutchStatus">
                     <p>Sjekk clutch lameller for slitasje</p>
                     <div>
-                        <label><input type="radio" name="ClutchStatus" value="OK">OK</label>
-                        <label><input type="radio" name="ClutchStatus" value="Bør Skiftes">Bør Skiftes</label>
-                        <label><input type="radio" name="ClutchStatus" value="Defekt"> Defekt</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="ClutchStatus" value="OK">OK</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="ClutchStatus" value="Bør Skiftes">Bør Skiftes</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="ClutchStatus" value="Defekt"> Defekt</label>
                     </div>
                 </div>
                 <div class="punkt" id="BremseStatus">
                     <p>Sjekk bremser. Bånd/pal</p>
                     <div>
-                        <label><input type="radio" name="BremseStatus" value="OK">OK</label>
-                        <label><input type="radio" name="BremseStatus" value="Bør Skiftes">Bør Skiftes</label>
-                        <label><input type="radio" name="BremseStatus" value="Defekt"> Defekt</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="BremseStatus" value="OK">OK</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="BremseStatus" value="Bør Skiftes">Bør Skiftes</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="BremseStatus" value="Defekt"> Defekt</label>
                     </div>
                 </div>
                 <div class="punkt" id="TrommelStatus">
                     <p>Sjekk lager på trommel</p>
                     <div>
-                        <label><input type="radio" name="TrommelStatus" value="OK">OK</label>
-                        <label><input type="radio" name="TrommelStatus" value="Bør Skiftes">Bør Skiftes</label>
-                        <label><input type="radio" name="TrommelStatus" value="Defekt"> Defekt</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="TrommelStatus" value="OK">OK</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="TrommelStatus" value="Bør Skiftes">Bør Skiftes</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="TrommelStatus" value="Defekt"> Defekt</label>
                     </div>
                 </div>
                 <div class="punkt" id="PTOStatus">
                     <p>Sjekk PTO og opplagring</p>
                     <div>
-                        <label><input type="radio" name="PTOStatus" value="OK">OK</label>
-                        <label><input type="radio" name="PTOStatus" value="Bør Skiftes">Bør Skiftes</label>
-                        <label><input type="radio" name="PTOStatus" value="Defekt"> Defekt</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="PTOStatus" value="OK">OK</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="PTOStatus" value="Bør Skiftes">Bør Skiftes</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="PTOStatus" value="Defekt"> Defekt</label>
                     </div>
                 </div>
                 <div class="punkt" id="KjedestrammerStatus">
                     <p>Sjekk kjedestrammer</p>
                     <div>
-                        <label><input type="radio" name="KjedestrammerStatus" value="OK">OK</label>
-                        <label><input type="radio" name="KjedestrammerStatus" value="Bør Skiftes">Bør Skiftes</label>
-                        <label><input type="radio" name="KjedestrammerStatus" value="Defekt"> Defekt</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="KjedestrammerStatus" value="OK">OK</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="KjedestrammerStatus" value="Bør Skiftes">Bør Skiftes</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="KjedestrammerStatus" value="Defekt"> Defekt</label>
                     </div>
                 </div>
                 <div class="punkt" id="WireStatus">
                     <p>Sjekk wire</p>
                     <div>
-                        <label><input type="radio" name="WireStatus" value="OK">OK</label>
-                        <label><input type="radio" name="WireStatus" value="Bør Skiftes">Bør Skiftes</label>
-                        <label><input type="radio" name="WireStatus" value="Defekt"> Defekt</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="WireStatus" value="OK">OK</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="WireStatus" value="Bør Skiftes">Bør Skiftes</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="WireStatus" value="Defekt"> Defekt</label>
                     </div>
                 </div>
                 <div class="punkt" id="PinionStatus">
                     <p>Sjekk pinion lager</p>
                     <div>
-                        <label><input type="radio" name="PinionStatus" value="OK">OK</label>
-                        <label><input type="radio" name="PinionStatus" value="Bør Skiftes">Bør Skiftes</label>
-                        <label><input type="radio" name="PinionStatus" value="Defekt"> Defekt</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="PinionStatus" value="OK">OK</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="PinionStatus" value="Bør Skiftes">Bør Skiftes</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="PinionStatus" value="Defekt"> Defekt</label>
                     </div>
                 </div>
                 <div class="punkt" id="KjedehjulStatus">
                     <p>Sjekk kile på kjedehjul</p>
                     <div>
-                        <label><input type="radio" name="KjedehjulStatus" value="OK">OK</label>
-                        <label><input type="radio" name="KjedehjulStatus" value="Bør Skiftes">Bør Skiftes</label>
-                        <label><input type="radio" name="KjedehjulStatus" value="Defekt"> Defekt</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="KjedehjulStatus" value="OK">OK</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="KjedehjulStatus" value="Bør Skiftes">Bør Skiftes</label>
+                        <label><input asp-for ="komponentKomponent_Status" type="radio" name="KjedehjulStatus" value="Defekt"> Defekt</label>
                     </div>
                 </div>
             </div>
@@ -97,57 +97,57 @@
                 <div class="punkt" id="HydraulikkStatus">
                     <p>Sjekk hydraulikk sylinder for lekkasje</p>
                     <div>
-                        <label><input type="radio" name="HydraulikkStatus" value="OK">OK</label>
-                        <label><input type="radio" name="HydraulikkStatus" value="Bør Skiftes">Bør Skiftes</label>
-                        <label><input type="radio" name="HydraulikkStatus" value="Defekt"> Defekt</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="HydraulikkStatus" value="OK">OK</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="HydraulikkStatus" value="Bør Skiftes">Bør Skiftes</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="HydraulikkStatus" value="Defekt"> Defekt</label>
                     </div>
                 </div>
                 <div class="punkt" id="SlangerStatus">
                     <p>Sjekk slanger for skader og lekkasje</p>
                     <div>
-                        <label><input type="radio" name="SlangerStatus" value="OK">OK</label>
-                        <label><input type="radio" name="SlangerStatus" value="Bør Skiftes">Bør Skiftes</label>
-                        <label><input type="radio" name="SlangerStatus" value="Defekt"> Defekt</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="SlangerStatus" value="OK">OK</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="SlangerStatus" value="Bør Skiftes">Bør Skiftes</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="SlangerStatus" value="Defekt"> Defekt</label>
                     </div>
                 </div>
                 <div class="punkt" id="HydraulikkblokkStatus">
                     <p>Test hydraulikkblokk i testbenk</p>
                     <div>
-                        <label><input type="radio" name="HydraulikkblokkStatus" value="OK">OK</label>
-                        <label><input type="radio" name="HydraulikkblokkStatus" value="Bør Skiftes">Bør Skiftes</label>
-                        <label><input type="radio" name="HydraulikkblokkStatus" value="Defekt"> Defekt</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="HydraulikkblokkStatus" value="OK">OK</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="HydraulikkblokkStatus" value="Bør Skiftes">Bør Skiftes</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="HydraulikkblokkStatus" value="Defekt"> Defekt</label>
                     </div>
                 </div>
                 <div class="punkt" id="OljeTankStatus">
                     <p>Skift olje i tank</p>
                     <div>
-                        <label><input type="radio" name="OljeTankStatus" value="OK">OK</label>
-                        <label><input type="radio" name="OljeTankStatus" value="Bør Skiftes">Bør Skiftes</label>
-                        <label><input type="radio" name="OljeTankStatus" value="Defekt"> Defekt</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="OljeTankStatus" value="OK">OK</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="OljeTankStatus" value="Bør Skiftes">Bør Skiftes</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="OljeTankStatus" value="Defekt"> Defekt</label>
                     </div>
                 </div>
                 <div class="punkt" id="OljeGirStatus">
                     <p>Skift olje på gir boks</p>
                     <div>
-                        <label><input type="radio" name="OljeGirStatus" value="OK">OK</label>
-                        <label><input type="radio" name="OljeGirStatus" value="Bør Skiftes">Bør Skiftes</label>
-                        <label><input type="radio" name="OljeGirStatus" value="Defekt"> Defekt</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="OljeGirStatus" value="OK">OK</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="OljeGirStatus" value="Bør Skiftes">Bør Skiftes</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="OljeGirStatus" value="Defekt"> Defekt</label>
                     </div>
                 </div>
                 <div class="punkt" id="RingsylinderStatus">
                     <p>Sjekk ringsylinder åpne og skift tetninger</p>
                     <div>
-                        <label><input type="radio" name="RingsylinderStatus" value="OK">OK</label>
-                        <label><input type="radio" name="RingsylinderStatus" value="Bør Skiftes">Bør Skiftes</label>
-                        <label><input type="radio" name="RingsylinderStatus" value="Defekt"> Defekt</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="RingsylinderStatus" value="OK">OK</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="RingsylinderStatus" value="Bør Skiftes">Bør Skiftes</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="RingsylinderStatus" value="Defekt"> Defekt</label>
                     </div>
                 </div>
                 <div class="punkt" id="BremsesylinderStatus">
                     <p>Sjekk bremsesylinder åpne og skift tetninger</p>
                     <div>
-                        <label><input type="radio" name="BremsesylinderStatus" value="OK">OK</label>
-                        <label><input type="radio" name="BremsesylinderStatus" value="Bør Skiftes">Bør Skiftes</label>
-                        <label><input type="radio" name="BremsesylinderStatus" value="Defekt"> Defekt</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="BremsesylinderStatus" value="OK">OK</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="BremsesylinderStatus" value="Bør Skiftes">Bør Skiftes</label>
+                        <label><input asp-for="komponentKomponent_Status" type="radio" name="BremsesylinderStatus" value="Defekt"> Defekt</label>
                     </div>
                 </div>
             </div>
@@ -187,36 +187,37 @@
         <label for="trykkSettingEn">xx-Bar:
             <input id="trykkSettingEn" type="text"/>
         </label>
-        <label for="trykkSettingTo">x:
-            <input id="trykkSettingTo" type="text"/>
+        <label asp-for="trykkBar" for="trykkSettingTo">x:
+            <input asp-for="trykkBar" id="trykkSettingTo" type="text"/>
         </label>
     </div>
     <div class="wide-container wide-c-tre">
         <h4 class="enhetHeader">Funksjons test</h4>
-        <label for="funksjonsTestEn">Test vinsj og kjør alle funksjoner:
-            <input id="funksjonsTestEn" type="text"/>
+        <label asp-for="funksjonsTestVinsj" for="funksjonsTestEn">Test vinsj og kjør alle funksjoner:
+            <input asp-for="funksjonsTestVinsj" id="funksjonsTestEn" type="text"/>
         </label>
-        <label for="funksjonsTestTo">Trekkkraft KN:
-            <input id="funksjonsTestTo" type="text"/>
+        <label asp-for="funksjonsTrekkraft" for="funksjonsTestTo">Trekkkraft KN:
+            <input asp-for="funksjonsTrekkraft" id="funksjonsTestTo" type="text"/>
         </label>
-        <label for="funksjonsTestTre">Bremsekraft KN:
-            <input id="funksjonsTestTre" type="text"/>
+        <label asp-for="funksjonsBremsekraft" for="funksjonsTestTre">Bremsekraft KN:
+            <input asp-for="funksjonsBremsekraft" id="funksjonsTestTre" type="text"/>
         </label>
     </div>
     <div class="wide-container wide-c-fire">
         <h4 class="enhetHeader">Kommentarer</h4>
-        <label for="kommentarEn">Kommentar:
-            <input id="kommentarEn" type="text" placeholder="Skriv inn evt. kommentarer her..."/>
+        <label asp-for="signaturKommentar" for="kommentarEn">
+            Kommentar:
+            <input asp-for="signaturKommentar" id="kommentarEn" type="text" placeholder="Skriv inn evt. kommentarer her..." />
         </label>
     </div>
     <div class="wide-container wide-c-fem">
         <div class="enhetBunn">
-            <label for="SjekklisteSign">Signatur:</label>
-            <input id="SjekklisteSign" type="text"/>
+            <label asp-for="signaturSignatur" for="SjekklisteSign">Signatur:</label>
+            <input asp-for="signaturSignatur" id="SjekklisteSign" type="text" />
         </div>
         <div class="enhetBunn">
-            <label for="SjekklisteDato">Dato:</label>
-            <input id="SjekklisteDato" type="datetime-local"/>
+            <label asp-for="signaturDato" for="SjekklisteDato">Dato:</label>
+            <input asp-for="signaturDato" id="SjekklisteDato" type="datetime-local"/>
         </div>
     </div>
     <input id="skjemaBtn" type="submit" value="Ferdig"/>
