@@ -1,8 +1,9 @@
-﻿namespace Vinsj.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Vinsj.Models;
 
 public class ServiceSkjemaView
 {
-    public int ServiceOrdreID { get; set; } // This might be set automatically if it's a generated key
 
     // Properties from Kunde_informasjon
     public string KundeNavn { get; set; }

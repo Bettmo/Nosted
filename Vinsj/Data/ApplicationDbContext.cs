@@ -27,7 +27,15 @@ namespace Vinsj.Data;
         */
         
         /* Eric: Legg alle modellene under: */
-        public DbSet<test> Tests { get; set; }
+        public DbSet<Funksjons_test> FunksjonsTests { get; set; }
+        public DbSet<Komponent_service> KomponentServices { get; set; }
+        public DbSet<Kunde_informasjon> KundeInformasjons { get; set; }
+        public DbSet<Produkt_informasjon> ProduktInformasjons { get; set; } 
+        public DbSet<ServiceOrdre> ServiceOrdres { get; set; }
+        public DbSet <ServiceSkjema> ServiceSkjemas { get; set; }
+        public DbSet<SignaturerModel> SignaturerModels { get; set; }
+        public DbSet<trykk_settinger> TrykkSettingers { get; set; }
+
         
        // public DbSet<Mekanisk> mekanisk { get; set; }
         
@@ -43,7 +51,10 @@ namespace Vinsj.Data;
           .HasForeignKey at det er en foreign key
 
           forkortelsene er bare variabel navnet brukt i et lambda utrykk for en instant av entiteten som blir konfigurert */
-            
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Komponent_service>()
+                .HasKey(ks => new { ks.ServiceOrdreID_FK, ks.Komponent });
             
             
         }

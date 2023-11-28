@@ -1,8 +1,10 @@
-﻿namespace Vinsj.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Vinsj.Models
 {
     public class SjekklisteView
     {
-
+        [Key]
         public int ServiceOrdreID { get; set; }
 
         //Properties from Komponent_service
