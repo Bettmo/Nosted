@@ -69,7 +69,7 @@ public class ServiceOrderController : Controller
             await _context.SaveChangesAsync();
             
 
-            return RedirectToAction("ServiceSkjema","Home", new { id = serviceOrdre.ServiceOrdreID });
+            return RedirectToAction("ServiceSkjema","Home");
             
         }
 
